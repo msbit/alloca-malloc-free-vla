@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 int main(int argc, char **argv) {
@@ -18,6 +19,8 @@ int main(int argc, char **argv) {
   // using compiler VLA
   int values[count];
 #endif
+
+  printf("values: %p\n", values);
 
   for (int i = 0; i < count; i++) { values[i] = i; }
 
