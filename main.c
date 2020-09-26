@@ -3,7 +3,9 @@
 
 int main(int argc, char **argv) {
   int count = 0;
-  if (argc > 1) { count = strtol(argv[1], NULL, 10); }
+  if (argc > 1) {
+    count = strtol(argv[1], NULL, 10);
+  }
 
 #ifdef USE_ALLOCA
   // using `alloca`
@@ -22,9 +24,11 @@ int main(int argc, char **argv) {
 
   printf("values: %p\n", values);
 
-  for (int i = 0; i < count; i++) { values[i] = i; }
+  for (int i = 0; i < count; i++) {
+    values[i] = i;
+  }
 
-  int result = values[count - 1]; 
+  int result = values[count - 1];
 
 #ifdef USE_MALLOC_FREE
   // using `malloc` + `free`
